@@ -1,16 +1,51 @@
-# React + Vite
+# Nexus Scraper - AI Web Extraction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nexus Scraper is a universal, AI-powered Chrome Extension designed for seamless and efficient eCommerce web scraping. It automatically extracts product information, manages pagination, and handles deep product scraping from various platforms.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Universal Scraping**: Extract product details (titles, prices, images, descriptions) from any eCommerce site.
+- **Platform Specific Adapters**: Built-in support and optimized extraction for major platforms like Shopify and WooCommerce.
+- **Deep Scraping**: Navigate into individual product pages to extract comprehensive descriptions and metadata.
+- **Pagination Crawling**: Automatically traverse through category pages to queue and scrape multiple products.
+- **Duplicate Prevention**: Intelligently identifies and skips previously scraped products.
+- **Export Capabilities**: Easily export extracted data to CSV or Excel formats.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS & Framer Motion
+- **Data Processing**: PapaParse, XLSX
+- **Extension Tooling**: @crxjs/vite-plugin
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ashik-2004/web-scraper.git
+   cd web-scraper
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the extension:
+   ```bash
+   npm run build
+   ```
+
+4. Load into Chrome:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode" in the top right corner
+   - Click "Load unpacked" and select the `dist` folder generated after the build.
+
+## Development
+
+Run the development server with HMR:
+```bash
+npm run dev
+```
+*(Note: You will need to load the extension as unpacked from the output directory for live updates in Chrome)*
