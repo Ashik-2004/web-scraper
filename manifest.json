@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Nexus Scraper - AI Web Extraction",
+  "version": "1.0.0",
+  "description": "Universal AI-powered web scraper for eCommerce.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background/service_worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
